@@ -1,0 +1,118 @@
+body {
+    font-family: arial;
+    background-color: #223;
+    color: white;
+}
+#content {
+    width: 60em;
+    border: 1px solid red;
+    margin: 8em auto;
+}
+#content {
+    text-align: justify;
+}
+#content .add {
+    font-size: 1.5em;
+    margin: 2em 0;
+    text-align: center;
+}
+#content .add a {
+    background-color: orange;
+    padding: .5em; 
+    text-decoration: none;
+    margin-left: .5em;
+
+    position: absolute;
+    top: 21em;
+
+    border-radius: 0 0 0.2em 0.2em;
+    transform-origin: 50% 5em;
+
+    animation: wiggle 1.5s linear infinite;
+}
+ @keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+#content .add a:hover {
+    background-color: rgba(149, 221, 14, 0.911);
+}
+/* MODAL WINDOW */
+#modal {
+    background-color: #678;
+    padding: 2.5em;
+
+    display: none;
+    position: fixed;
+    top: 9em;
+    left: 22em;
+    z-index: 1;
+}
+#modal:target {
+    display: block;
+}
+#modal input {
+    padding: 1em;
+    width: 25em;
+}
+#modal input.number {
+    width: 20.2em;
+}
+#modal button {
+    padding: 1em;
+    width: 27.3em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#modal a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+
+    position: absolute;
+    right: .5em;
+    top: .2em;
+}
+#modal:target+ .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#000A;
+}
+ #modal form .phone select {
+    width: 4.5em;
+    height:3.5em;
+}
+ #modal form input:hover,
+ #modal form .phone select:hover,
+ #modal form button:hover
+ {
+    background-color:orange;
+    color: blue;
+    border: 1px solid blue;
+}
+/* hw4:UX
+-add efects on :hover--active elements-done
+-while:hover --this BUTTON+css animation-done
+while playing with TEXT-- use EM-done
+ */

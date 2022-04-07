@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal Windows: pseudo+position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- hw1:main-why??? -done
+    A fost ales anume tagul main,deoarece acesta din punct de vedere semantic acesta desemnează conținutul principal
+    al documentului,reprezentând esența lui.-->
+    <main id="content">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, aut!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In et pariatur laboriosam. Fuga cupiditate nobis maxime commodi quasi temporibus adipisci nam, non ipsam, nemo officia vitae, veniam labore assumenda distinctio! Nulla esse labore, eos, itaque beatae voluptatum fugit sequi cupiditate explicabo, cum tenetur non quo dicta quas temporibus. Dolorem, sapiente.</p>
+        <p>Tempora fugit mollitia eius necessitatibus quas dolor dolorum, non atque ut doloremque, itaque quam in? Eius ut suscipit nostrum vel quos earum similique. Ipsam sit necessitatibus, accusantium magnam consequuntur quas. Aspernatur harum dolor odio voluptas ad expedita quasi, laudantium, cumque, non ex labore blanditiis iusto delectus ut quia consectetur necessitatibus.</p>
+        <p>Distinctio eveniet cum sequi, exercitationem fugiat laborum temporibus ex aut provident praesentium quod eligendi, accusamus ratione officia possimus amet iusto accusantium? Possimus aspernatur, corrupti doloribus quis iste, perspiciatis nam, tempora ratione fugiat aperiam qui dolorum explicabo consectetur. Reiciendis eius similique neque? Quaerat eveniet et amet sit. Praesentium aperiam minus explicabo.</p>
+        <p class="add">
+            To benefit from it HIT <a href="#modal">THIS BUTTON</a>
+        </p>
+    </main>
+    <div id="modal">
+        <!-- hw2:is it correct to use another h1?-done
+        Cred că nu-i rezonabil de utilizat încă un h1,întrucât acesta v-a duce în eroare pe utilizator care v-a dori  s-ă completeze formularul.Altă idee nu am. -->
+        <h1>Apply for this product!</h1>
+        <h2>In order to apply fill in the blank</h2>
+
+        <form>
+            <!-- 
+                hw3:
+                label-- input-done
+                select--prefixes [input phone]-done
+                full name+phone-- must fill-done
+            -->
+            <label>
+                <input 
+                required 
+                type="text" placeholder="full name:e.g. Jared Leto"><br/>
+            </label>  
+            <label class="phone">
+                <select>
+                    <option>+373-Moldova</option>
+                    <option>+49-Germany</option>
+                    <option>+351-Portugal</option>
+                    <option>+40-Romania</option>
+                    <option>+381-Serbia</option>
+                </select>
+                <input class="number"
+                required 
+                type="text" placeholder="phone: +123/45678"><br/></label>
+            <label>
+                <input type="text"placeholder="email:john@something.example"><br/></label>
+            <button>APPLY!!!</button>
+        </form>
+        <a href="#">X</a>
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>
